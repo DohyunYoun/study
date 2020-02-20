@@ -19,5 +19,19 @@
 public class Queue{
     public static void main(String[] args) {
         System.out.println("Default Main Fuction Sample");
+
+        //PriorityQueue
+        //LinkedList
+        //Deque
+        Queue<String> queue = new LinkedList<String>();
+		for(int i=0;i<3;i++)
+			queue.add("데이터-"+i); //큐에 데이터를 삽입한다.
+		
+		//queue = ["데이터-0", "데이터-1", "데이터-2"], front=0, rear=2
+		
+		System.out.println(queue.peek()); //큐의 front가 가리키는 값을 반환한다.         데이터-0
+		System.out.println(queue.poll()); //큐의 front가 가리키는 값을 반환하고 삭제한다.    데이터-0
+		System.out.println(queue.isEmpty()); // false
+		System.out.println(queue);			//[데이터-1, 데이터-2]
     }
 }
