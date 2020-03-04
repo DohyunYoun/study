@@ -1,17 +1,13 @@
+import java.util.Stack;
+
 /**
- * https://freestrokes.tistory.com/83?category=1045118 참고
- * Stack
- * - 계산기, 뒤로가기 버튼 구현 등
+ * https://freestrokes.tistory.com/83?category=1045118 참고 Stack - 계산기, 뒤로가기 버튼
+ * 구현 등
  * 
- * empty
- * peek
- * pop
- * push
- * search
- * 배열로 구현 : 조회가 빠름 / 최대개수를 정해놓아야만 함
- * 링크드 리스트로 구현 : 삽입/삭제가 빠름 / 조회가 어려움
+ * empty peek pop push search 배열로 구현 : 조회가 빠름 / 최대개수를 정해놓아야만 함 링크드 리스트로 구현 :
+ * 삽입/삭제가 빠름 / 조회가 어려움
  */
-public class Stack{
+public class BasicStack{
     public static void main(String[] args) {
         System.out.println("Default Main Fuction Sample");
         Stack<String> stack = new Stack<String>(); //Generics을 이용하여 Collection이 저장할 데이터 타입 지정
