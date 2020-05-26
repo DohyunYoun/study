@@ -12,12 +12,12 @@ class Pos{
 	int x;
 	int y;
 	int time;
-
+	
 	Pos(int x, int y){
 		this.x = x;
 		this.y = y;
 	}
-
+	
 	Pos(int x, int y, int time){
 		this.x = x;
 		this.y = y;
@@ -25,11 +25,11 @@ class Pos{
 	}
 }
 
-class Main{
+class Baekjoon5427{
 	static int R, C;
 	// 위, 아래, 왼쪽, 오른쪽
-	static int[] xdir = {-1,1,0,0};
-	static int[] ydir = {0,0,-1,1};
+	int[] xdir = {-1,1,0,0};
+	int[] ydir = {0,0,-1,1};
 	static int min;
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -41,7 +41,7 @@ class Main{
 			C = Integer.parseInt(temp[0]);
 			Pos person = null;	// 초기 상근이 위치
 			Queue<Pos> fires = new LinkedList<>();	// 초기 불의 위치
-
+			
 			// 불과 상근이 방문 여부 체크
 			// 빌딩 공간을 둘러싸는 박스 형태로 위,아래,왼쪽,오른쪽으로 한 칸씩 더 크게 만든다.
 			int[][] visited = new int[R+2][C+2];
@@ -56,24 +56,24 @@ class Main{
 						visited[i][j] = -1;
 					}
 					else if(c == '@')
-						person = new Pos(i,j,0);
+					person = new Pos(i,j,0);
 					else if(c == '#')
-						visited[i][j] = -1;
+					visited[i][j] = -1;
 				}
 			}
-
+			
 			min = Integer.MAX_VALUE;
-			bfs(person, fires, visited);	// bfs 탐색
-
+			new Baekjoon5427().bfs(person, fires, visited);	// bfs 탐색
+			
 			// MAX_VALUE 그대로 라면 끝에 도달하지 못한 것이므로 IMPOSSIBLE 출력
 			if(min != Integer.MAX_VALUE)
-				System.out.println(min);
+			System.out.println(min);
 			else
-				System.out.println("IMPOSSIBLE");
+			System.out.println("IMPOSSIBLE");
 		}
 	}
-
-	private static void bfs(Pos person, Queue<Pos> fires, int[][] visited){
+	
+	void bfs(Pos person, Queue<Pos> fires, int[][] visited){
 		Queue<Pos> q = new LinkedList<>();
 		
 		// 초기화
@@ -100,7 +100,7 @@ class Main{
 					}
 				}
 			}
-
+			
 			// 상근이 이동
 			for(int i=0, end=q.size(); i<end; i++) {
 				Pos p = q.poll();
@@ -113,7 +113,7 @@ class Main{
 					min = min > time ? time : min;
 					continue;
 				}
-
+				
 				for(int j=0; j<4; j++){
 					int dx = x + xdir[j];
 					int dy = y + ydir[j];

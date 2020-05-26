@@ -1,33 +1,35 @@
 package TusedayOHMS;
-//https://developer-mac.tistory.com/63
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
 import java.util.Stack;
- 
-public class Beak1260 {
+/**
+ * //https://developer-mac.tistory.com/63
+ */
+public class Baekjoon1260 {
     static ArrayList<Integer>[] list;
     static int n;
     static boolean[] check;
- 
+    
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         n = sc.nextInt();
         int m = sc.nextInt();
         int start = sc.nextInt();
- 
+        
         list = new ArrayList[n + 1];
- 
+        
         for (int i = 1; i < n + 1; i++) {
             list[i] = new ArrayList<Integer>();
         }
- 
+        
         for (int i = 0; i < m; i++) {
             int u = sc.nextInt();
             int v = sc.nextInt();
- 
+            
             list[u].add(v);
             list[v].add(u);
         }
@@ -35,35 +37,35 @@ public class Beak1260 {
             Collections.sort(list[i]);
         }
         check = new boolean[n + 1];
-        dfs(start);
+        new Baekjoon1260(). dfs(start);
         System.out.println();
- 
+        
         check = new boolean[n + 1];
-        bfs(start);
+        new Baekjoon1260(). bfs(start);
         System.out.println();
- 
+        
         sc.close();
     }
- 
-    private static void dfs(int x) {
+    
+    void dfs(int x) {
         if (check[x]) {
             return;
         }
- 
+        
         check[x] = true;
         System.out.print(x + " ");
         for (int y : list[x]) {
             if (!check[y])
-                dfs(y);
+            dfs(y);
         }
- 
+        
     }
- 
-    private static void bfs(int start) {
+    
+    void bfs(int start) {
         Queue<Integer> queue = new LinkedList<Integer>();
         queue.add(start);
         check[start] = true;
- 
+        
         while (!queue.isEmpty()) {
             int x = queue.poll();
             System.out.print(x + " ");
@@ -76,4 +78,3 @@ public class Beak1260 {
         }
     }
 }
- 
