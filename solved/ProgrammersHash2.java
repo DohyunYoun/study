@@ -1,3 +1,4 @@
+package solved;
 import java.util.Arrays;
 import java.util.HashMap;
 
@@ -24,7 +25,7 @@ public class ProgrammersHash2 {
                 }
             }
         }
-
+        return answer;
 
         //동작하는지 확인 필요
         // Arrays.sort(phoneBook);

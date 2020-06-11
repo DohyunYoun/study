@@ -1,3 +1,4 @@
+package solved;
 import java.util.HashMap;
 
 public class ProgrammersHash1 {

@@ -1,3 +1,4 @@
+package solved;
 //206. ReverseLinkedList
 class ListNode {
     int val;

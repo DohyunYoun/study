@@ -38,3 +38,13 @@ https://www.acmicpc.net/problem/____
    >1644, 1806,2143
 2. 그리디/dp
    > 2579, 2206, 2667
+
+
+## 3주차 (~6/9)
+1. [큰 수 만들기](https://programmers.co.kr/learn/challenges)
+2. [더 맵게](https://programmers.co.kr/learn/courses/30/lessons/42626)
+3. [여행경로](https://programmers.co.kr/learn/courses/30/lessons/43164)
+4. [짝지어 제거하기](https://programmers.co.kr/learn/courses/30/lessons/12973)
+5. [문자열 압축하기](https://programmers.co.kr/learn/courses/30/lessons/60057)
+6. [피보나치 수열](https://programmers.co.kr/learn/courses/30/lessons/12945)
+   

@@ -1,4 +1,4 @@
-
+package solved;
 class ListNode {
     int val;
     ListNode next;
@@ -11,7 +11,7 @@ public class PalindromeLinkedList234{
         ListNode tmp = new ListNode(0);
         ListNode tmp2 = new ListNode(0);
         tmp.next = tmp2;
-        System.out.println("Default Main Fuction Sample    "+isPalindrome(tmp));
+        // System.out.println("Default Main Fuction Sample    "+isPalindrome(tmp));
     }
  /*    
     static boolean isPalindrome(ListNode head) {

@@ -1,3 +1,4 @@
+package solved;
 //509
 public class FibonacciNumber{
     public static void main(String[] args) {

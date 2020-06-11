@@ -1,3 +1,4 @@
+package solved;
 import java.util.Hashtable;
 import java.util.Set;
 
@@ -47,23 +48,24 @@ public class IntersectionOfTwoLinkedLists160{
         return null;
 
         //length check 1 ms	42.6 MB
-        if(headA == null || headB == null) return null;
-        ListNode a = headA;
-        ListNode b = headB;
-        while(a!=b){
-            if(a==null){
-                a = headB;
-            }else{
-                a = a.next;
-            }
 
-            if(b==null){
-                b = headA;
-            }else{
-                b = b.next;
-            }
-        }
-        return a;
+        // if(headA == null || headB == null) return null;
+        // ListNode a = headA;
+        // ListNode b = headB;
+        // while(a!=b){
+        //     if(a==null){
+        //         a = headB;
+        //     }else{
+        //         a = a.next;
+        //     }
+
+        //     if(b==null){
+        //         b = headA;
+        //     }else{
+        //         b = b.next;
+        //     }
+        // }
+        // return a;
 
 
 

@@ -1,3 +1,4 @@
+package solved;
 public class  MaximumDepthOfBinaryTree104{
     
     static class TreeNode {

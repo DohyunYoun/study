@@ -47,12 +47,12 @@ public class ReverseString{
         }
 
         //0ms / 46.8mb
-        int right = s.length - 1;
-        int size = s.length / 2;
-        for(int i = 0 ; i<size ; i++){
-            char tmp = s[i];
-            s[i] = s[right-i];
-            s[right-i] = tmp;
-        }
+        // int right = s.length - 1;
+        // int size = s.length / 2;
+        // for(int i = 0 ; i<size ; i++){
+        //     char tmp = s[i];
+        //     s[i] = s[right-i];
+        //     s[right-i] = tmp;
+        // }
     }
 }

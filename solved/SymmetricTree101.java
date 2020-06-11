@@ -1,4 +1,5 @@
-  class TreeNode {
+package solved;
+class TreeNode {
     int val;
     TreeNode left;
     TreeNode right;

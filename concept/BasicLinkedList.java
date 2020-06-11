@@ -1,4 +1,4 @@
-
+package concept;
 /**
  * Linked List 추가/삭제 : O(1) 검색 : O(n) 정렬 : O(nlogn)
  * 
