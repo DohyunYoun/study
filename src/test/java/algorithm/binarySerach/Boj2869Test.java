@@ -1,13 +1,9 @@
-package algorithm.bst;
+package algorithm.binarySerach;
 
-import algorithm.graph.ProgrammersTravelPath;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.StringTokenizer;
 
 import static org.junit.Assert.*;
 
@@ -36,7 +32,9 @@ public class Boj2869Test {
     @Test
     public void testA(){
         //given
-
+        a = 2;
+        b=1;
+        v=5;
         //when
         int expected = 4;
         int acture =   problem.solve(a,b,v);

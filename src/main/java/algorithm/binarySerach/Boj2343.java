@@ -1,11 +1,9 @@
-package algorithm.bst;
+package algorithm.binarySerach;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 import java.util.StringTokenizer;
-import java.util.stream.IntStream;
 
 /**
  * Created by DohyunYoun on 2020-06-11
