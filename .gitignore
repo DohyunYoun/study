@@ -5,6 +5,8 @@
 ./bin
 ./gradle
 ./build
+./out
 ./.classpath
 ./.project
+
 
