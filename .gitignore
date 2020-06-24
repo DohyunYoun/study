@@ -1,12 +1,12 @@
 ./vscode/.vscode/
-./.gradle
-./.idea
-./.settings
-./bin
-./gradle
-./build
-./out
-./.classpath
-./.project
+./.gradle/
+./.idea/
+./.settings/
+./bin/
+./gradle/
+./build/
+./out/
+./.classpath/
+./.project/
 
 
