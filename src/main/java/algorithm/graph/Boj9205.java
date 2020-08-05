@@ -6,6 +6,7 @@ import java.util.ArrayDeque;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
+//https://zoonvivor.tistory.com/113
 public class Boj9205 {
     private static String HAPPY = "happy";
     private static String SAD = "sad";
@@ -51,13 +52,16 @@ public class Boj9205 {
                 System.out.println(HAPPY);
                 break;
             }
-            while(queue.size() > 0){
+            while(queue.size() > 1){
                 Point store = queue.poll();
                 if(house.distance(store)){
-                    
+                    house = store;
+                }else{
+                    queue.offer(store);
                 }
             }
-            System.out.println(isHappy ? HAPPY : SAD);
+
+            System.out.println(house.distance() ? HAPPY : SAD);
         }
 
 //        if (point != null) {
