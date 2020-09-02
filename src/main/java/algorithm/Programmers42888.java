@@ -5,7 +5,7 @@ import java.util.*;
 public class Programmers42888 {
     public String[] solution(String[] record) {
         List<String> answer = new ArrayList<>();
-        Map<String, String> records = new LinkedHashMap<>();
+        Map<String, String> records = new HashMap<>();
         for (String s : record) {
             //대량 처리시 split보다 StringTokenizer이 runtime이 적게 나옴
             //ex) test28 : 257.79ms vs 384.26ms
