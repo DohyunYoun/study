@@ -3,25 +3,72 @@ package algorithm;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.StringTokenizer;
+import java.util.*;
 
-public class Boj1026 {
+public class Boj2504 {
+
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int SIZE = Integer.parseInt(br.readLine());
-        StringTokenizer st = new StringTokenizer(br.readLine());
-        int[] A = new int[SIZE];
-        int[] B = new int[SIZE];
-        for (int i = 0; i < SIZE; i++) {
-            A[i] = Integer.parseInt(st.nextToken());
-        }
-        st = new StringTokenizer(br.readLine());
-        for (int i = 0; i < SIZE; i++) {
-            B[i] = Integer.parseInt(st.nextToken());
-        }
+        String[] brackets = br.readLine().split("");
+        Stack<String> stack = new Stack<>();
 
-        List<Integer> biggest = new ArrayList<>();
+
+        int hasOutter = 0;
+        int innerSum = 1;
+
+        int sum = 0;
+        loop:
+        for (String bracket : brackets) {
+            String start = "";
+            if (!stack.isEmpty())
+                start = stack.peek();
+
+            switch (bracket) {
+                case "(":
+                    stack.push(bracket);
+                    hasOutter++;
+                    break;
+                case "[":
+                    stack.push(bracket);
+                    hasOutter++;
+                    break;
+                case ")":
+                    if ("(".equals(start)) {
+                        stack.pop();
+                        if (hasOutter > 1) {
+                            innerSum *= 2;
+                        } else {
+                            innerSum = 1;
+                        }
+                        sum += innerSum;
+                        hasOutter--;
+                    } else {
+                        sum = 0;
+                        break loop;
+                    }
+                    break;
+                case "]":
+
+                    if ("[".equals(start)) {
+                        stack.pop();
+                        if (hasOutter > 1) {
+                            innerSum *= 3;
+                        } else {
+                            innerSum = 1;
+                        }
+                        sum += innerSum;
+                        hasOutter--;
+                    } else {
+                        sum = 0;
+                        break loop;
+                    }
+                    break;
+            }
+            if (!stack.isEmpty())
+                sum = 0;
+
+            System.out.println(sum);
+        }
     }
+
 }

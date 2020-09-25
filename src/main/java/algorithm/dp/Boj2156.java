@@ -25,6 +25,9 @@ public class Boj2156 {
             wines[i] = Integer.parseInt(br.readLine());
         }
         System.out.println(new Boj2156().drinkWine(wines));
+        StringBuilder sb;
+        StringBuffer sf;
+        String s;
 
     }
 

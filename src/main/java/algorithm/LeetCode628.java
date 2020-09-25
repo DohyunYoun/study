@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 public class LeetCode628 {
     /**
-     * sort : O(nlogn)
+     * sort : O(n logn)
      * 9 ms	41.7 MB
      */
     public int maximumProduct(int[] nums) {
