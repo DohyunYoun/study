@@ -28,11 +28,31 @@ public class Boj1946 {
         }
     }
 
+    /**
+     *
+     * 3 6
+     * 7 3
+     * 4 2
+     * 1 4
+     * 5 7
+     * 2 5
+     * 6 1
+     *
+     *
+     * 1 4
+     * -2 5
+     * -3 6
+     * 4 2
+     * -5 7
+     * 6 1 <
+     * -7 3
+     */
     static int maxMembers(int[][] candidates, int len) {
-        Arrays.sort(candidates, ((o1, o2) -> Integer.compare(o2[0], o1[0])));
+        Arrays.sort(candidates);
         int result = len;
         for(int i = 0; i < len-1; i ++){
-            if(candidates[i][0] > candidates[i+1][0] && candidates[i][1] > candidates[i+1][1]){
+            //candidates[i][0] > candidates[i+1][0] &&
+            if( candidates[i][1] > candidates[i+1][1]){
                 result--;
             }
         }

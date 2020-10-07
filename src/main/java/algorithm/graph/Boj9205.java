@@ -61,7 +61,7 @@ public class Boj9205 {
                 }
             }
 
-            System.out.println(house.distance() ? HAPPY : SAD);
+//            System.out.println(house.distance() ? HAPPY : SAD);
         }
 
 //        if (point != null) {
