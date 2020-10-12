@@ -1,5 +1,6 @@
 package algorithm;
 
+import algorithm.structure.LeetCode347;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
