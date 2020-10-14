@@ -1,0 +1,5 @@
+package patterns.factorymethod;
+
+public abstract class Shape {
+    abstract void draw();
+}
