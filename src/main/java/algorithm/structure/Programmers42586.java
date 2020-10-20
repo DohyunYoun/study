@@ -9,7 +9,8 @@ public class Programmers42586 {
         int jobCount = 0;
         int duration = 0;
         for (int i = 0; i < progresses.length; i++) {
-            int leftJobs = (int) Math.ceil((100 - progresses[i]) / speeds[i]);
+            //double로 타입캐스팅을 안하면 테케11번 실패함
+            int leftJobs = (int) Math.ceil((double)(100 - progresses[i]) / speeds[i]);
             if (duration == 0) duration = leftJobs;
             if (duration >= leftJobs) {
                 jobCount++;
