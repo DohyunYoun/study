@@ -13,7 +13,7 @@ public class Programmers12914 {
             steps[i] = (steps[i - 2] + steps[i - 1]) % 1234567;
         }
 
-        // overflowError - 큰값에 나머지 연산을 하면 에러가 ..?
+        // BigInt로 바꾸면 마지막에 나머지 연산을 해줘도된다.
         return steps[n - 1];
     }
 }
