@@ -42,3 +42,16 @@ src/main/java/algorithm/kakaoenterprise/Problem2.java
 src/main/java/algorithm/kakaoenterprise/Problem3.java
 src/main/java/algorithm/woowa/
 /src/test/
+/lib/kotlin-reflect.jar
+/lib/kotlin-reflect-sources.jar
+/lib/kotlin-stdlib.jar
+/lib/kotlin-stdlib-jdk7.jar
+/lib/kotlin-stdlib-jdk7-sources.jar
+/lib/kotlin-stdlib-jdk8.jar
+/lib/kotlin-stdlib-jdk8-sources.jar
+/lib/kotlin-stdlib-sources.jar
+/lib/kotlin-test.jar
+/lib/kotlin-test-sources.jar
+/src/main/main.iml
+/study.iml
+/vscode/vscode.iml
