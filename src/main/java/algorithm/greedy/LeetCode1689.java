@@ -4,6 +4,10 @@ import java.util.Arrays;
 
 public class LeetCode1689 {
 
+//    fun minPartitions(n: String): Int {
+//        return n.toList().max()!! - '0'
+//    }
+
     public int minPartitions(String n) {
         //161 ms	48.4 MB
 //        String[] nums = n.split("");
