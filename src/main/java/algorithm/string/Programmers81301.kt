@@ -26,6 +26,7 @@ class Programmers81301 {
             }
         }
 
+        return answer.toString().toInt()
 //        var answer = s
 //
 //        val map = mutableMapOf<String, Int>(
