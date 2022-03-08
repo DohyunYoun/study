@@ -1,0 +1,16 @@
+class Solution {
+    fun countMatches(items: List<List<String>>, ruleKey: String, ruleValue: String): Int {
+          val index = when(ruleKey){
+            "type"->0
+            "color"->1
+            "name"->2
+            else->-1
+        }
+        var result = 0
+
+        items.forEach{
+            if(it[index] == ruleValue) result++
+        }
+        return result
+    }
+}
