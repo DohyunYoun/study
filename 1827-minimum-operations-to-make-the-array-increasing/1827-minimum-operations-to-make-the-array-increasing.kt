@@ -1,9 +1,8 @@
 class Solution {
     fun minOperations(nums: IntArray): Int {
-            var left = nums[0]
+            var left = -1
         var result = 0
-        (1..nums.size-1).forEach { index ->
-            val right = nums[index]
+        nums.forEach { right->
             if (left >= right) {
                 result += left - right + 1
                 left++
