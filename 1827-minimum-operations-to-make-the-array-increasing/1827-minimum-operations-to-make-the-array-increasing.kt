@@ -1,14 +1,13 @@
 class Solution {
     fun minOperations(nums: IntArray): Int {
-            var left = -1
+        if(nums.size <2) return 0
         var result = 0
-        nums.forEach { right->
-            if (left >= right) {
-                result += left - right + 1
-                left++
-            } else {
-                left = right
-            }
+        (1..nums.size-1).forEach { i ->
+           if (nums[i - 1] >= nums[i]){
+               val increment = nums[i - 1] - nums[i] + 1
+            result += increment
+            nums[i] += increment
+           }
         }
         return result
     }
