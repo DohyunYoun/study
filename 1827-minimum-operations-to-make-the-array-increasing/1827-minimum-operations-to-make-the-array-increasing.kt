@@ -4,9 +4,8 @@ class Solution {
         var result = 0
         (1..nums.size-1).forEach { i ->
            if (nums[i - 1] >= nums[i]){
-               val increment = nums[i - 1] - nums[i] + 1
-            result += increment
-            nums[i] += increment
+            result += nums[i - 1] - nums[i] + 1
+            nums[i] += nums[i - 1] - nums[i] + 1
            }
         }
         return result
