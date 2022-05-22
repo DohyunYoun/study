@@ -1,6 +1,6 @@
 class Solution {
     fun checkIfPangram(sentence: String): Boolean {
-           val PANGRAM = "abcdefghijklmnopqrstuvwxyz"
-        return sentence.toList().distinct().sorted().joinToString("") == PANGRAM
+     val ALPHABET_SIZE = 26
+        return sentence.toSet().size == ALPHABET_SIZE
     }
 }
