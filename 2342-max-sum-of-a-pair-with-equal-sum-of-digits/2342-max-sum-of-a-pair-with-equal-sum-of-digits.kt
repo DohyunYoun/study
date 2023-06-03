@@ -1,7 +1,7 @@
 class Solution {
          fun maximumSum(nums: IntArray): Int {
-//        val sumOfDigits = nums.map { num -> num.toString().map { it.digitToInt() }.sum() }
-        val sumOfDigits = nums.map { num -> num.toString().map { it.toInt() - '0'.toInt() }.sum() }
+        val sumOfDigits = nums.map { num -> num.toString().map { it.digitToInt() }.sum() }
+        //val sumOfDigits = nums.map { num -> num.toString().map { it.toInt() - '0'.toInt() }.sum() }
         var maxSum = -1
         val trash = arrayListOf<Int>()
 
